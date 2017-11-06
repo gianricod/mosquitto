@@ -26,7 +26,7 @@ clean :
 libmosquittopp.so.${SOVERSION} : mosquittopp.o
 	${CROSS_COMPILE}$(CXX) -shared $(LIB_LDFLAGS) $< -o $@ ../libmosquitto.so.${SOVERSION}
 
-libmosquittopp.a : ../mosquitto.o mosquittopp.o
+libmosquittopp.a : mosquittopp.o
 	${CROSS_COMPILE}$(AR) cr $@ $^
 
 mosquittopp.o : mosquittopp.cpp mosquittopp.h
